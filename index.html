@@ -4,94 +4,186 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Datenschutzinformation: Videoaufnahme für eine Masterarbeit (THI)</title>
+<title>Datenschutzinformation / Privacy Notice: Computer Vision Approach to Identify Parked Vehicles Based on Smartphone Camera Data (THI)</title>
 <style>
-  :root { --ink:#111; --muted:#555; --accent:#b7791f; --warn:#fff3cd; --warn-border:#b7791f; --ph:#fff59d; }
+  :root { --ink:#111; --muted:#555; --accent:#b7791f; --warn:#fff3cd; --warn-border:#b7791f; --ph:#fff59d; --blue:#2b6cb0; }
   body { font-family: Arial, Helvetica, sans-serif; color: var(--ink); line-height: 1.5; margin: 0; background: #fafafa; }
-  main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; background: #fff; }
-  h1 { font-size: 1.6rem; line-height: 1.25; margin: 0.5rem 0 0.25rem; }
+  main { max-width: 46rem; margin: 0 auto; padding: 1rem 1rem 3rem; background: #fff; }
+  h1 { font-size: 1.5rem; line-height: 1.25; margin: 0.5rem 0 0.25rem; }
   h2 { font-size: 1.15rem; margin-top: 1.8rem; border-bottom: 1px solid #ccc; padding-bottom: 0.2rem; }
-  .banner { background: var(--warn); border: 2px solid var(--warn-border); padding: 0.6rem 0.9rem; margin: 0 0 1rem; font-weight: bold; }
-  .summary { background: #eef5fb; border-left: 5px solid #2b6cb0; padding: 0.8rem 1rem; margin: 1rem 0; }
+  .banner { background: var(--warn); border: 2px solid var(--warn-border); padding: 0.6rem 0.9rem; margin: 0.5rem 0 1rem; font-weight: bold; }
+  .summary { background: #eef5fb; border-left: 5px solid var(--blue); padding: 0.8rem 1rem; margin: 1rem 0; }
   .summary ul { margin: 0.4rem 0 0; padding-left: 1.2rem; }
   .ph { background: var(--ph); padding: 0 0.2rem; }
   .meta { color: var(--muted); font-size: 0.9rem; }
   table { border-collapse: collapse; width: 100%; margin: 0.6rem 0; font-size: 0.95rem; }
   th, td { border: 1px solid #bbb; padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
   th { background: #f0f0f0; }
-  .en { border-top: 3px double #999; margin-top: 2.5rem; padding-top: 1rem; }
   footer { color: var(--muted); font-size: 0.85rem; margin-top: 2rem; }
   a { color: #1a4f8b; }
+  .langbar { display: flex; justify-content: flex-end; gap: 0; margin: 0 0 0.5rem; }
+  .langbar button { font: inherit; font-weight: bold; padding: 0.4rem 1rem; border: 2px solid var(--blue); background: #fff; color: var(--blue); cursor: pointer; }
+  .langbar button:first-child { border-radius: 6px 0 0 6px; }
+  .langbar button:last-child { border-radius: 0 6px 6px 0; border-left: none; }
+  .langbar button[aria-pressed="true"] { background: var(--blue); color: #fff; }
+  [hidden] { display: none !important; }
+  @media print { .langbar { display: none; } }
 </style>
 </head>
 <body>
 <main>
-  <p class="banner">ENTWURF: Diese Seite ist noch nicht vom Datenschutzbeauftragten freigegeben. Es finden keine Aufnahmen statt, bevor die Freigabe vorliegt und dieser Hinweis entfernt ist.</p>
-
-  <p class="meta">Technische Hochschule Ingolstadt (THI) · Masterarbeit · Datenschutzinformation nach Art. 13 DSGVO · Stand: <span class="ph">[Datum]</span>, Version 1.0</p>
-  <h1>Datenschutzinformation zur kurzzeitigen Videoaufnahme für die Masterarbeit „Computer Vision Approach to Identify Parked Vehicles Based on Smartphone Camera Data“</h1>
-  <p class="meta">Masterarbeit zur Erkennung geparkter Fahrzeuge aus Smartphone-Kameradaten an der Technischen Hochschule Ingolstadt.</p>
-
-  <div class="summary">
-    <strong>Das Wichtigste in Kürze</strong>
-    <ul>
-      <li>Ein Pkw mit einem Smartphone hinter der Windschutzscheibe fährt an höchstens 3 Tagen im Zeitraum <span class="ph">[Zeitraum]</span> einige Male durch einen 110 m langen Abschnitt der <span class="ph">[Straßenname]</span> (von <span class="ph">[Startpunkt]</span> bis <span class="ph">[Endpunkt]</span>) und nimmt dabei die Fahrbahn und die Parkbuchten auf.</li>
-      <li>Höchstens 20 Fahrten, jede Aufnahme kürzer als eine Minute. <strong>Kein Ton, keine Standortdaten.</strong></li>
-      <li><strong>Gesichter und Kennzeichen werden unkenntlich gemacht</strong>, bevor die Aufnahmen für irgendetwas verwendet werden. Rohaufnahmen werden innerhalb von 72 Stunden gelöscht.</li>
-      <li><strong>Nichts wird veröffentlicht oder weitergegeben.</strong> Keine Cloud, keine Dienstleister, keine Dritten.</li>
-      <li>Sie möchten nicht aufgenommen werden? Umgehen Sie den Abschnitt während der angegebenen Zeiten über die gegenüberliegende Straßenseite oder sprechen Sie die Ansprechperson vor Ort an: Die Aufnahme wird sofort gestoppt und der Clip vor Ihren Augen gelöscht.</li>
-    </ul>
+  <div class="langbar" role="group" aria-label="Sprache / Language">
+    <button type="button" id="btn-de" aria-pressed="true" onclick="setLang('de')">DE Deutsch</button>
+    <button type="button" id="btn-en" aria-pressed="false" onclick="setLang('en')">EN English</button>
   </div>
 
-  <h2>Aufnahmetage</h2>
-  <table>
-    <tr><th>Datum</th><th>Zeitfenster</th><th>Abschnitt</th></tr>
-    <tr><td><span class="ph">[Tag 1]</span></td><td><span class="ph">[von bis]</span></td><td rowspan="3"><span class="ph">[Straßenname]</span>, von <span class="ph">[Startpunkt]</span> bis <span class="ph">[Endpunkt]</span> (110 m)</td></tr>
-    <tr><td><span class="ph">[Tag 2]</span></td><td><span class="ph">[von bis]</span></td></tr>
-    <tr><td><span class="ph">[Tag 3]</span></td><td><span class="ph">[von bis]</span></td></tr>
-  </table>
+  <!-- ===================================================== DEUTSCH ===================================================== -->
+  <section id="lang-de" lang="de">
+    <p class="banner">ENTWURF: Diese Seite ist noch nicht vom Datenschutzbeauftragten freigegeben. Es finden keine Aufnahmen statt, bevor die Freigabe vorliegt und dieser Hinweis entfernt ist.</p>
 
-  <h2>1. Verantwortlicher</h2>
-  <p>Technische Hochschule Ingolstadt (THI), Körperschaft des öffentlichen Rechts, Esplanade 10, 85049 Ingolstadt, vertreten durch den Präsidenten. Fachlich verantwortliche Organisationseinheit: <span class="ph">[Fakultät / Forschungsinstitut]</span>. Betreuung der Arbeit: <span class="ph">[Name, Funktion, E-Mail, Telefon]</span>. Die Aufnahmen führt der Masterstudent Md Yamin Mollah im Auftrag und unter Aufsicht dieser Organisationseinheit durch.</p>
+    <p class="meta">Technische Hochschule Ingolstadt (THI) · Masterarbeit · Datenschutzinformation nach Art. 13 DSGVO · Stand: <span class="ph">[Datum]</span>, Version 1.0</p>
+    <h1>Datenschutzinformation zur kurzzeitigen Videoaufnahme für die Masterarbeit „Computer Vision Approach to Identify Parked Vehicles Based on Smartphone Camera Data“</h1>
+    <p class="meta">Masterarbeit zur Erkennung geparkter Fahrzeuge aus Smartphone-Kameradaten an der Technischen Hochschule Ingolstadt.</p>
 
-  <h2>2. Datenschutzbeauftragter</h2>
-  <p>Datenschutzbeauftragter der THI, Esplanade 10, 85049 Ingolstadt, E-Mail: <span class="ph">[datenschutz@thi.de, prüfen]</span>, Telefon: <span class="ph">[prüfen]</span>.</p>
+    <div class="summary">
+      <strong>Das Wichtigste in Kürze</strong>
+      <ul>
+        <li>Ein Pkw mit einem Smartphone hinter der Windschutzscheibe fährt an höchstens 3 Tagen im Zeitraum <span class="ph">[Zeitraum]</span> einige Male durch einen 110 m langen Abschnitt der <span class="ph">[Straßenname]</span> (von <span class="ph">[Startpunkt]</span> bis <span class="ph">[Endpunkt]</span>) und nimmt dabei die Fahrbahn und die Parkbuchten auf.</li>
+        <li>Höchstens 20 Fahrten, jede Aufnahme kürzer als eine Minute. <strong>Kein Ton, keine Standortdaten.</strong></li>
+        <li><strong>Gesichter und Kennzeichen werden unkenntlich gemacht</strong>, bevor die Aufnahmen für irgendetwas verwendet werden. Rohaufnahmen werden innerhalb von 72 Stunden gelöscht.</li>
+        <li><strong>Nichts wird veröffentlicht oder weitergegeben.</strong> Keine Cloud, keine Dienstleister, keine Dritten.</li>
+        <li>Sie möchten nicht aufgenommen werden? Umgehen Sie den Abschnitt während der angegebenen Zeiten über die gegenüberliegende Straßenseite oder sprechen Sie die Ansprechperson vor Ort an: Die Aufnahme wird sofort gestoppt und der Clip vor Ihren Augen gelöscht.</li>
+      </ul>
+    </div>
 
-  <h2>3. Was wird aufgenommen, wo und wann</h2>
-  <p>Ein Smartphone hinter der Windschutzscheibe eines Pkw nimmt während höchstens 20 Durchfahrten an höchstens 3 Tagen im Zeitraum <span class="ph">[Zeitraum]</span> die Fahrbahn und die Parkbuchten der <span class="ph">[Straßenname]</span> zwischen <span class="ph">[Startpunkt]</span> und <span class="ph">[Endpunkt]</span> (110 m) als Video ohne Ton auf. Jede Aufnahme dauert weniger als eine Minute und wird nur innerhalb dieses Abschnitts gestartet und gestoppt. Es gibt keine Dauerüberwachung und keine Aufnahme außerhalb dieser Fahrten. Eine Smartphone-App, die das Verfahren vorführt, verarbeitet das Kamerabild nur flüchtig im Arbeitsspeicher und speichert kein Bild.</p>
+    <h2>Aufnahmetage</h2>
+    <table>
+      <tr><th>Datum</th><th>Zeitfenster</th><th>Abschnitt</th></tr>
+      <tr><td><span class="ph">[Tag 1]</span></td><td><span class="ph">[von bis]</span></td><td rowspan="3"><span class="ph">[Straßenname]</span>, von <span class="ph">[Startpunkt]</span> bis <span class="ph">[Endpunkt]</span> (110 m)</td></tr>
+      <tr><td><span class="ph">[Tag 2]</span></td><td><span class="ph">[von bis]</span></td></tr>
+      <tr><td><span class="ph">[Tag 3]</span></td><td><span class="ph">[von bis]</span></td></tr>
+    </table>
 
-  <h2>4. Welche Daten können Sie betreffen</h2>
-  <p>Wenn Sie sich während einer Durchfahrt in dem Abschnitt aufhalten, können Ihr Fahrzeug mit Kennzeichen, Ihre Gestalt, Kleidung und möglicherweise Ihr Gesicht im Bild sein. Ton wird nicht aufgezeichnet, Standortdaten werden nicht gespeichert, eine Zuordnung zu Namen oder anderen Daten findet nicht statt.</p>
+    <h2>1. Verantwortlicher</h2>
+    <p>Technische Hochschule Ingolstadt (THI), Körperschaft des öffentlichen Rechts, Esplanade 10, 85049 Ingolstadt, vertreten durch den Präsidenten. Fachlich verantwortliche Organisationseinheit: <span class="ph">[Fakultät / Forschungsinstitut]</span>. Betreuung der Arbeit: <span class="ph">[Name, Funktion, E-Mail, Telefon]</span>. Die Aufnahmen führt der Masterstudent Md Yamin Mollah im Auftrag und unter Aufsicht dieser Organisationseinheit durch.</p>
 
-  <h2>5. Zweck</h2>
-  <p>Wissenschaftliche Evaluation eines Verfahrens zur Erkennung geparkter Fahrzeuge aus Kamerabildern im Rahmen einer Masterarbeit. Das Verfahren wurde überwiegend mit Bildern aus einer Computersimulation dieser Kreuzung entwickelt; die kurzen realen Aufnahmen dienen nur dazu, zu messen, wie gut es in der Wirklichkeit funktioniert. Die Aufnahmen dienen nicht der Überwachung, nicht der Parkraumkontrolle und keiner Identifizierung von Personen oder Fahrzeughaltern.</p>
+    <h2>2. Datenschutzbeauftragter</h2>
+    <p>Datenschutzbeauftragter der THI, Esplanade 10, 85049 Ingolstadt, E-Mail: <span class="ph">[datenschutz@thi.de, prüfen]</span>, Telefon: <span class="ph">[prüfen]</span>.</p>
 
-  <h2>6. Rechtsgrundlage</h2>
-  <p>Art. 6 Abs. 1 Buchst. e DSGVO in Verbindung mit Art. 4 Abs. 1 Bayerisches Datenschutzgesetz (BayDSG) und Art. 2 Abs. 1, Art. 3 Abs. 2 Bayerisches Hochschulinnovationsgesetz (BayHIG): Forschung und Lehre sind Aufgaben der Hochschule. Für Forschungsdaten gelten zusätzlich Art. 25 BayDSG und Art. 89 Abs. 1 DSGVO (frühestmögliche Anonymisierung, Zweckbindung, keine Veröffentlichung personenbezogener Daten). <span class="ph">[vom Datenschutzbeauftragten zu bestätigen]</span></p>
+    <h2>3. Was wird aufgenommen, wo und wann</h2>
+    <p>Ein Smartphone hinter der Windschutzscheibe eines Pkw nimmt während höchstens 20 Durchfahrten an höchstens 3 Tagen im Zeitraum <span class="ph">[Zeitraum]</span> die Fahrbahn und die Parkbuchten der <span class="ph">[Straßenname]</span> zwischen <span class="ph">[Startpunkt]</span> und <span class="ph">[Endpunkt]</span> (110 m) als Video ohne Ton auf. Jede Aufnahme dauert weniger als eine Minute und wird nur innerhalb dieses Abschnitts gestartet und gestoppt. Es gibt keine Dauerüberwachung und keine Aufnahme außerhalb dieser Fahrten. Eine Smartphone-App, die das Verfahren vorführt, verarbeitet das Kamerabild nur flüchtig im Arbeitsspeicher und speichert kein Bild.</p>
 
-  <h2>7. Was mit den Aufnahmen geschieht</h2>
-  <p>Die Aufnahmen werden noch am Aufnahmetag per Kabel auf einen verschlüsselten Laptop kopiert und auf dem Smartphone gelöscht. Auf dem Laptop werden Gesichter und Kennzeichen automatisch und anschließend von Hand kontrolliert unkenntlich gemacht; die Rohaufnahmen werden danach gelöscht (Ziel: innerhalb von 72 Stunden, spätestens nach 7 Tagen). Nur die anonymisierten Einzelbilder werden für die Auswertung benutzt. Die Aufnahmen werden zu keinem Zeitpunkt ins Internet, in eine Cloud, an Dienstleister oder an andere Personen übermittelt.</p>
+    <h2>4. Welche Daten können Sie betreffen</h2>
+    <p>Wenn Sie sich während einer Durchfahrt in dem Abschnitt aufhalten, können Ihr Fahrzeug mit Kennzeichen, Ihre Gestalt, Kleidung und möglicherweise Ihr Gesicht im Bild sein. Ton wird nicht aufgezeichnet, Standortdaten werden nicht gespeichert, eine Zuordnung zu Namen oder anderen Daten findet nicht statt.</p>
 
-  <h2>8. Empfänger</h2>
-  <p>Keine. Zugriff hat nur der Student; die Betreuung sieht ausschließlich anonymisierte Bilder zur Bewertung der Arbeit. Es gibt keine Auftragsverarbeiter und keine Übermittlung in Drittländer.</p>
+    <h2>5. Zweck</h2>
+    <p>Wissenschaftliche Evaluation eines Verfahrens zur Erkennung geparkter Fahrzeuge aus Kamerabildern im Rahmen einer Masterarbeit. Das Verfahren wurde überwiegend mit Bildern aus einer Computersimulation dieser Kreuzung entwickelt; die kurzen realen Aufnahmen dienen nur dazu, zu messen, wie gut es in der Wirklichkeit funktioniert. Die Aufnahmen dienen nicht der Überwachung, nicht der Parkraumkontrolle und keiner Identifizierung von Personen oder Fahrzeughaltern.</p>
 
-  <h2>9. Speicherdauer</h2>
-  <p>Rohaufnahmen: bis zur Anonymisierung, höchstens 7 Tage. Anonymisierte Bilder und Annotationen: bis zur endgültigen Benotung der Masterarbeit (voraussichtlich <span class="ph">[Monat/Jahr]</span>), dann Löschung. Dauerhaft bleiben nur trainierte Modellparameter, zusammengefasste Kennzahlen und einzelne anonymisierte Beispielbilder in der Arbeit, die keine Personen erkennen lassen.</p>
+    <h2>6. Rechtsgrundlage</h2>
+    <p>Art. 6 Abs. 1 Buchst. e DSGVO in Verbindung mit Art. 4 Abs. 1 Bayerisches Datenschutzgesetz (BayDSG) und Art. 2 Abs. 1, Art. 3 Abs. 2 Bayerisches Hochschulinnovationsgesetz (BayHIG): Forschung und Lehre sind Aufgaben der Hochschule. Für Forschungsdaten gelten zusätzlich Art. 25 BayDSG und Art. 89 Abs. 1 DSGVO (frühestmögliche Anonymisierung, Zweckbindung, keine Veröffentlichung personenbezogener Daten). <span class="ph">[vom Datenschutzbeauftragten zu bestätigen]</span></p>
 
-  <h2>10. Ihre Rechte</h2>
-  <p>Sie haben nach Art. 15 bis 21 DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch, soweit die Aufnahme Sie noch erkennen lässt, also bis zur Löschung der Rohaufnahmen. Sie können die Aufnahme vor Ort sofort stoppen lassen und einen Clip löschen lassen, indem Sie die Ansprechperson ansprechen; danach können Sie sich unter Angabe von Datum und Uhrzeit an <span class="ph">[E-Mail der Betreuung]</span> wenden. Nach der Anonymisierung können wir Sie nicht mehr identifizieren (Art. 11 DSGVO). Sie haben außerdem das Recht, sich bei einer Aufsichtsbehörde zu beschweren, insbesondere beim Bayerischen Landesbeauftragten für den Datenschutz, Wagmüllerstraße 18, 80538 München, <span class="ph">[poststelle@datenschutz-bayern.de, prüfen]</span>.</p>
+    <h2>7. Was mit den Aufnahmen geschieht</h2>
+    <p>Die Aufnahmen werden noch am Aufnahmetag per Kabel auf einen verschlüsselten Laptop kopiert und auf dem Smartphone gelöscht. Auf dem Laptop werden Gesichter und Kennzeichen automatisch und anschließend von Hand kontrolliert unkenntlich gemacht; die Rohaufnahmen werden danach gelöscht (Ziel: innerhalb von 72 Stunden, spätestens nach 7 Tagen). Nur die anonymisierten Einzelbilder werden für die Auswertung benutzt. Die Aufnahmen werden zu keinem Zeitpunkt ins Internet, in eine Cloud, an Dienstleister oder an andere Personen übermittelt.</p>
 
-  <h2>11. Keine Pflicht, keine automatisierte Entscheidung</h2>
-  <p>Sie sind nicht verpflichtet, sich aufnehmen zu lassen; Sie können den Abschnitt während der angegebenen Zeiten umgehen. Es findet keine automatisierte Entscheidung über Personen und kein Profiling statt; das Verfahren bewertet nur, ob Fahrzeuge geparkt sind, um Kennzahlen für die Arbeit zu berechnen.</p>
+    <h2>8. Empfänger</h2>
+    <p>Keine. Zugriff hat nur der Student; die Betreuung sieht ausschließlich anonymisierte Bilder zur Bewertung der Arbeit. Es gibt keine Auftragsverarbeiter und keine Übermittlung in Drittländer.</p>
 
-  <section class="en" lang="en">
-    <h2>English summary</h2>
-    <p>On at most 3 days in the period <span class="ph">[period]</span>, a car with a smartphone behind the windshield drives through a 110 m stretch of <span class="ph">[street]</span> (<span class="ph">[start]</span> to <span class="ph">[end]</span>) a few times and records the road and the parking bays for a master's thesis at Technische Hochschule Ingolstadt on detecting parked vehicles. No audio, no location data; at most 20 passes, each under one minute. Faces and licence plates are obscured before any use; raw footage is deleted within 72 hours. Nothing is published or shared; no cloud, no third parties. If you prefer not to be recorded, use the opposite pavement during the listed times or speak to the person on site: recording stops at once and the clip is deleted in front of you. Controller: Technische Hochschule Ingolstadt, <span class="ph">[unit]</span>; contact <span class="ph">[e-mail]</span>; data protection officer <span class="ph">[datenschutz@thi.de]</span>. You may complain to the Bavarian Data Protection Commissioner (BayLfD), Munich.</p>
+    <h2>9. Speicherdauer</h2>
+    <p>Rohaufnahmen: bis zur Anonymisierung, höchstens 7 Tage. Anonymisierte Bilder und Annotationen: bis zur endgültigen Benotung der Masterarbeit (voraussichtlich <span class="ph">[Monat/Jahr]</span>), dann Löschung. Dauerhaft bleiben nur trainierte Modellparameter, zusammengefasste Kennzahlen und einzelne anonymisierte Beispielbilder in der Arbeit, die keine Personen erkennen lassen.</p>
+
+    <h2>10. Ihre Rechte</h2>
+    <p>Sie haben nach Art. 15 bis 21 DSGVO das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Widerspruch, soweit die Aufnahme Sie noch erkennen lässt, also bis zur Löschung der Rohaufnahmen. Sie können die Aufnahme vor Ort sofort stoppen lassen und einen Clip löschen lassen, indem Sie die Ansprechperson ansprechen; danach können Sie sich unter Angabe von Datum und Uhrzeit an <span class="ph">[E-Mail der Betreuung]</span> wenden. Nach der Anonymisierung können wir Sie nicht mehr identifizieren (Art. 11 DSGVO). Sie haben außerdem das Recht, sich bei einer Aufsichtsbehörde zu beschweren, insbesondere beim Bayerischen Landesbeauftragten für den Datenschutz, Wagmüllerstraße 18, 80538 München, <span class="ph">[poststelle@datenschutz-bayern.de, prüfen]</span>.</p>
+
+    <h2>11. Keine Pflicht, keine automatisierte Entscheidung</h2>
+    <p>Sie sind nicht verpflichtet, sich aufnehmen zu lassen; Sie können den Abschnitt während der angegebenen Zeiten umgehen. Es findet keine automatisierte Entscheidung über Personen und kein Profiling statt; das Verfahren bewertet nur, ob Fahrzeuge geparkt sind, um Kennzahlen für die Arbeit zu berechnen.</p>
+
+    <footer>
+      <p>Diese Seite dient ausschließlich der Information betroffener Personen. Sie enthält keine Aufnahmen, setzt keine Cookies und speichert nichts in Ihrem Browser; die Sprachwahl steht nur in der Adresszeile. Hosting: GitHub Pages (statische Seite ohne Tracking durch den Verantwortlichen). <span class="ph">[Falls die OE eine eigene Seite stellt, wird diese Adresse dorthin weitergeleitet.]</span> Die deutsche Fassung ist maßgeblich; die englische Fassung dient der Verständlichkeit.</p>
+    </footer>
   </section>
 
-  <footer>
-    <p>Diese Seite dient ausschließlich der Information betroffener Personen. Sie enthält keine Aufnahmen und setzt keine Cookies. Hosting: GitHub Pages (statische Seite ohne Tracking durch den Verantwortlichen). <span class="ph">[Falls die OE eine eigene Seite stellt, wird diese Adresse dorthin weitergeleitet.]</span></p>
-  </footer>
+  <!-- ===================================================== ENGLISH ===================================================== -->
+  <section id="lang-en" lang="en" hidden>
+    <p class="banner">DRAFT: This page has not yet been approved by the data protection officer. No recording takes place before approval has been given and this notice removed.</p>
+
+    <p class="meta">Technische Hochschule Ingolstadt (THI) · Master's thesis · Privacy notice under Art. 13 GDPR · As of: <span class="ph">[date]</span>, version 1.0</p>
+    <h1>Privacy notice on the short video recording for the master's thesis "Computer Vision Approach to Identify Parked Vehicles Based on Smartphone Camera Data"</h1>
+    <p class="meta">Master's thesis on identifying parked vehicles from smartphone camera data at Technische Hochschule Ingolstadt (THI, Ingolstadt University of Applied Sciences).</p>
+
+    <div class="summary">
+      <strong>The essentials</strong>
+      <ul>
+        <li>On at most 3 days in the period <span class="ph">[period]</span>, a car with a smartphone behind the windshield drives a few times through a 110 m stretch of <span class="ph">[street name]</span> (from <span class="ph">[start point]</span> to <span class="ph">[end point]</span>) and records the road and the parking bays.</li>
+        <li>At most 20 passes, each recording shorter than one minute. <strong>No audio, no location data.</strong></li>
+        <li><strong>Faces and licence plates are obscured</strong> before the recordings are used for anything. Raw footage is deleted within 72 hours.</li>
+        <li><strong>Nothing is published or shared.</strong> No cloud, no service providers, no third parties.</li>
+        <li>Prefer not to be recorded? Avoid the stretch during the listed times by using the opposite pavement, or speak to the person on site: recording stops at once and the clip is deleted in front of you.</li>
+      </ul>
+    </div>
+
+    <h2>Recording days</h2>
+    <table>
+      <tr><th>Date</th><th>Time window</th><th>Stretch</th></tr>
+      <tr><td><span class="ph">[day 1]</span></td><td><span class="ph">[from to]</span></td><td rowspan="3"><span class="ph">[street name]</span>, from <span class="ph">[start point]</span> to <span class="ph">[end point]</span> (110 m)</td></tr>
+      <tr><td><span class="ph">[day 2]</span></td><td><span class="ph">[from to]</span></td></tr>
+      <tr><td><span class="ph">[day 3]</span></td><td><span class="ph">[from to]</span></td></tr>
+    </table>
+
+    <h2>1. Controller</h2>
+    <p>Technische Hochschule Ingolstadt (THI), a public-law corporation, Esplanade 10, 85049 Ingolstadt, Germany, represented by its President. Responsible organisational unit: <span class="ph">[faculty / research institute]</span>. Thesis supervisor: <span class="ph">[name, function, e-mail, telephone]</span>. The recordings are made by the master's student Md Yamin Mollah on behalf of and under the supervision of this unit.</p>
+
+    <h2>2. Data protection officer</h2>
+    <p>Data protection officer of THI, Esplanade 10, 85049 Ingolstadt, e-mail: <span class="ph">[datenschutz@thi.de, to be verified]</span>, telephone: <span class="ph">[to be verified]</span>.</p>
+
+    <h2>3. What is recorded, where and when</h2>
+    <p>A smartphone behind the windshield of a car records the road and the parking bays of <span class="ph">[street name]</span> between <span class="ph">[start point]</span> and <span class="ph">[end point]</span> (110 m) as video without audio, during at most 20 passes on at most 3 days in the period <span class="ph">[period]</span>. Each recording lasts less than one minute and is started and stopped only inside this stretch. There is no continuous surveillance and no recording outside these passes. A smartphone app that demonstrates the method processes the camera image only transiently in memory and stores no image.</p>
+
+    <h2>4. Which data may concern you</h2>
+    <p>If you are in the stretch during a pass, your vehicle with its licence plate, your figure, clothing and possibly your face may appear in the image. No audio is recorded, no location data is stored, and no link to names or other data is made.</p>
+
+    <h2>5. Purpose</h2>
+    <p>Scientific evaluation of a method that identifies parked vehicles in camera images, within a master's thesis. The method was developed mainly with images from a computer simulation of this junction; the short real recordings serve only to measure how well it works in reality. The recordings are not used for surveillance, parking enforcement or the identification of persons or vehicle keepers.</p>
+
+    <h2>6. Legal basis</h2>
+    <p>Art. 6(1)(e) GDPR in conjunction with Art. 4(1) of the Bavarian Data Protection Act (BayDSG) and Art. 2(1), Art. 3(2) of the Bavarian Higher Education Innovation Act (BayHIG): research and teaching are tasks of the university. For research data, Art. 25 BayDSG and Art. 89(1) GDPR additionally apply (anonymisation at the earliest possible moment, purpose limitation, no publication of personal data). <span class="ph">[to be confirmed by the data protection officer]</span></p>
+
+    <h2>7. What happens to the recordings</h2>
+    <p>On the day of recording the clips are copied by cable to an encrypted laptop and deleted from the smartphone. On the laptop, faces and licence plates are obscured automatically and then checked by hand; the raw footage is deleted afterwards (target: within 72 hours, at the latest after 7 days). Only the anonymised frames are used for the evaluation. The recordings are never transmitted to the internet, a cloud, service providers or other persons.</p>
+
+    <h2>8. Recipients</h2>
+    <p>None. Only the student has access; the supervisor sees anonymised images only, for grading the thesis. There are no processors and no transfers to third countries.</p>
+
+    <h2>9. Storage period</h2>
+    <p>Raw footage: until anonymisation, at most 7 days. Anonymised frames and annotations: until the thesis grade is final (expected <span class="ph">[month/year]</span>), then deletion. What remains permanently are trained model parameters, aggregate metrics and a few anonymised example images in the thesis in which no person is recognisable.</p>
+
+    <h2>10. Your rights</h2>
+    <p>Under Art. 15 to 21 GDPR you have the right of access, rectification, erasure, restriction of processing and objection, as long as the recording still allows you to be recognised, that is until the raw footage is deleted. You can have the recording stopped and a clip deleted on the spot by speaking to the person on site; afterwards you can contact <span class="ph">[supervisor's e-mail]</span>, stating the date and time. After anonymisation we can no longer identify you (Art. 11 GDPR). You also have the right to lodge a complaint with a supervisory authority, in particular the Bavarian Data Protection Commissioner (Bayerischer Landesbeauftragter für den Datenschutz), Wagmüllerstraße 18, 80538 Munich, <span class="ph">[poststelle@datenschutz-bayern.de, to be verified]</span>.</p>
+
+    <h2>11. No obligation, no automated decision</h2>
+    <p>You are not obliged to be recorded; you can avoid the stretch during the listed times. There is no automated decision-making about persons and no profiling; the method only assesses whether vehicles are parked, to compute metrics for the thesis.</p>
+
+    <footer>
+      <p>This page serves solely to inform data subjects. It contains no recordings, sets no cookies and stores nothing in your browser; the language choice lives only in the address bar. Hosting: GitHub Pages (static page, no tracking by the controller). <span class="ph">[If the organisational unit provides its own page, this address will redirect there.]</span> The German version is authoritative; the English version is provided for convenience.</p>
+    </footer>
+  </section>
 </main>
+
+<script>
+  function setLang(lang) {
+    var de = lang === 'de';
+    document.getElementById('lang-de').hidden = !de;
+    document.getElementById('lang-en').hidden = de;
+    document.getElementById('btn-de').setAttribute('aria-pressed', de ? 'true' : 'false');
+    document.getElementById('btn-en').setAttribute('aria-pressed', de ? 'false' : 'true');
+    document.documentElement.lang = lang;
+    if (history.replaceState) { history.replaceState(null, '', '#' + lang); }
+  }
+  (function () {
+    var h = (location.hash || '').replace('#', '');
+    if (h === 'en' || h === 'de') { setLang(h); return; }
+    var nav = (navigator.language || '').toLowerCase();
+    if (nav && nav.indexOf('de') !== 0) { setLang('en'); }
+  })();
+</script>
 </body>
 </html>
